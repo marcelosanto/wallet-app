@@ -53,4 +53,10 @@ class ParseTransactionValueInputUseCaseTest {
         val result = transactionValueInputUseCase("2,131")
         assertThat(result).isFalse()
     }
+
+    @Test
+    fun testNoValueReturnsFalse(){
+        val result = transactionValueInputUseCase("1514c")
+        assertThat(result).isFalse()
+    }
 }
